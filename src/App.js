@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Navbar from './Navbar';
 import './App.css';
-
-function App() {
+import {useEffect} from 'react';
+import Sidebar from './Sidebar';
+import Books from './Books';
+const App = () => {
+  // useEffect(() => {
+  //   const uri = '/book';
+  //   const getDocs = async () => {
+  //     try {
+  //       const doc = await fetch(uri, {
+  //         method: 'GET'
+  //       })
+  //       const json = await doc.json()
+  //       console.log(json)
+  //     } catch (error) {
+  //       console.log(error)
+  //     }
+  //   }
+  //   getDocs() 
+  // }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+          <Sidebar />
+          <Routes>
+            <Route path='/' element={<Books />}/>
+          </Routes>
+      </div>
+    </Router>
   );
 }
 
