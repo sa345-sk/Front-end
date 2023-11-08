@@ -32,7 +32,7 @@ a {
 @media only screen and (min-width: 360px) {
 .navbar {
     width: 100%;
-    height: 70px;
+    height: 90px;
     background-image: linear-gradient(to left, var(--default-color), #041b15);
     display: flex;
     flex-flow: row wrap;
@@ -41,7 +41,6 @@ a {
   }
 
   .navbar .nav {
-    width: 150px;
     width: 50px;
     background-image: url('./img/Button.svg');
     background-size: cover;
@@ -49,17 +48,20 @@ a {
     background-position: center;
     cursor: pointer;
     margin: 10px 0 0 5px;
+    position: relative;
+    top: 15px;
   }
 
   .navbar h1 {
-    padding: 15px 0 0 10px;
+    padding: 15px 0 0 30px;
     color: var(--default-color);
+    
   }
 
   .navbar .seacrh-bar {
-    margin: 20px 15px 0 auto;
-    display: none;
+    margin: 0 auto;
   }
+
 /*Search bar*/
     .seacrh-bar input {
       width: 250px;
@@ -89,6 +91,7 @@ a {
       margin: 10px 0 0 10px;
       cursor: pointer;
     }
+    /**/
     /*Sidebar*/
   .sidebar {
     width: 0px;
@@ -100,6 +103,7 @@ a {
     margin-top: 70px;
     display: none;
     z-index: 1000;
+    overflow: hidden;
   }
 
   .sidebar .user {
@@ -132,15 +136,13 @@ a {
     text-decoration: underline;
     background-color: rgba(32, 171, 132, 0.2);
   }
-
   /*Books*/
   .books {
     width: 100%;
-    height: calc(100vh - 70px);
+    height: 100%;
     display: flex;
     flex-flow: row wrap;
     padding-top: 70px;
-    
   }
 
   .books div {
@@ -160,7 +162,7 @@ a {
 
   .books img {
     width: 100%;
-    height: 200px;
+    height: 205px;
   }
 
   .books p {
@@ -177,11 +179,11 @@ a {
     color: var(--error);
   }
   .search-popup {
-    width: 100%;
-    height: calc(100vh - 70px);
+    width: 100vw;
+    height: 100%;
     background-color: rgba(32, 171, 132, 0.9);
     position: absolute;
-    z-index: 1500;
+    z-index: 1001;
   }
   .search-popup input {
           width: 250px;
@@ -207,189 +209,7 @@ a {
 }
 
 /*350px*/
-@media only screen and (min-width: 280px) {
-  .navbar {
-    width: 100%;
-    height: 70px;
-    background-image: linear-gradient(to left, var(--default-color), #041b15);
-    display: flex;
-    flex-flow: row wrap;
-    position: fixed;
-  }
 
-  .navbar .nav {
-    width: 150px;
-    width: 50px;
-    background-image: url('./img/Button.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    margin: 10px 0 0 5px;
-  }
-
-  .navbar h1 {
-    padding: 25px 0 0 0;
-    color: var(--default-color);
-    font-size: 22px;
-  }
-
-  .navbar .seacrh-bar {
-    margin: 20px 15px 0 auto;
-    display: none;
-  }
-
-  /*Search bar*/
-  .seacrh-bar input {
-    width: 250px;
-    height: 20px;
-    border-radius: 20px 20px 20px 20px;
-    border: 0;
-  }
-
-  .btn {
-    text-decoration: none;
-    cursor: pointer;
-    display: inline-block;
-    border: 0;
-    padding: 5px 10px;
-    border-radius: 20px;
-    background-image: linear-gradient(to left, var(--default-color), #041b15);
-    border: 2px solid #1aac83;
-    color: #fff;
-  }
-
-  .btn:hover {
-    opacity: 0.7;
-  }
-
-  .si {
-    width: 70px;
-    height: 50px;
-    margin: 10px 0 0 10px;
-    cursor: pointer;
-  }
-
-  /*Sidebar*/
-  .sidebar {
-    width: 0px;
-    height: calc(100vh - 70px);
-    background-color: #041b15;
-    display: flex;
-    flex-flow: column wrap;
-    position: fixed;
-    margin-top: 70px;
-    display: none;
-  }
-
-  .sidebar .user {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-  .sidebar .user img {
-    padding-top: 5px;
-    width: 70px;
-    height: 50px;
-    border-radius: 1000px 1000px 1000px 1000px;
-  }
-
-  .sidebar .user p {
-    padding-left: 10px;
-    padding-top: 20px;
-  }
-
-  .sidebar a {
-    color: var(--default-color);
-    text-decoration: none;
-    padding: 10px 0 40px 0;
-    text-align: center;
-  }
-
-  .sidebar a:hover {
-    text-decoration: underline;
-    background-color: rgba(32, 171, 132, 0.2);
-  }
-
-  /*Books*/
-  .books {
-    width: 100%;
-    height: calc(100vh - 70px);
-    display: flex;
-    flex-flow: row wrap;
-    padding-top: 70px;
-
-  }
-
-  .books div {
-    width: 100%;
-    height: fit-content;
-    margin: 15px 15px 15px 15px;
-    border-radius: 8px;
-    background: #c3c3c3;
-  }
-
-  .books div:hover {
-    border: #48a087 solid 2px;
-  }
-
-  .books h4 {
-    text-align: center;
-    padding: 5px 0;
-  }
-
-  .books img {
-    width: 100%;
-    height: 110px;
-  }
-
-  .books p {
-    text-align: center;
-    text-transform: capitalize;
-  }
-
-  .books p a {
-    color: black;
-    text-decoration: none;
-  }
-
-  .books p a:hover {
-    color: var(--error);
-  }
-  /*Search popup*/
-        .search-popup {
-          width: 100%;
-          height: calc(100vh - 70px);
-          background-color: rgba(32, 171, 132, 0.9);
-          position: absolute;
-          z-index: 1500;
-        }
-    
-        .search-popup input {
-          width: 250px;
-          height: 20px;
-          border-radius: 20px 20px 20px 20px;
-          border: 0;
-          margin: 68px 68px 0 68px;
-          text-align: center;
-        }
-    
-        .search-popup .btn-s {
-          text-decoration: none;
-          cursor: pointer;
-          display: inline-block;
-          border: 0;
-          padding: 5px 10px;
-          border-radius: 20px;
-          background-image: linear-gradient(to left, var(--default-color), #041b15);
-          border: 2px solid #1aac83;
-          color: #fff;
-          margin: 20px 68px 0 68px;
-          width: 250px;
-        }
-}
 
 @media only screen and (min-width: 600px) {
   /*Navbar*/
@@ -545,7 +365,7 @@ a {
     /*Searc popup*/
             .search-popup {
               width: 100%;
-              height: calc(100vh - 70px);
+              height: 100vh;
               background-color: rgba(32, 171, 132, 0.9);
               position: absolute;
               z-index: 1500;
@@ -644,6 +464,7 @@ a {
   flex-flow: column wrap;
   position: fixed;
   margin-top: 70px;
+  overflow:hidden;
 }
 
 .sidebar .user {
